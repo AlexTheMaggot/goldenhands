@@ -1,0 +1,50 @@
+.mainwindow {
+  background: url("../img/bg01.jpg") center;
+  background-size: cover;
+  &__title {
+    text-align: center;
+    margin-top: 100px;
+    font-size: 2.4rem;
+    &::after {
+      content: '';
+      display: block;
+      width: 50%;
+      height: 2px;
+      background-color: @gray-dark;
+      margin: 30px auto;
+    }
+  }
+  &__text {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+  &__button {
+    display: block;
+    width: fit-content;
+    margin: 0 auto 50px auto;
+    padding: 10px 20px;
+    font-size: 1.3rem;
+    background-color: @golden;
+    color: @black;
+    transition: all 0.3s;
+    &:hover {
+      text-decoration: none;
+      background-color: @pink-dark;
+      color: @white;
+    }
+  }
+  &__background {
+    background: url("../img/bg02.jpg") center fixed;
+    background-size: cover;
+  }
+}
+@media (min-width: 992px) {
+  .mainwindow {
+    background: @white;
+    &__title {
+      &::after {
+        background-color: @golden;
+      }
+    }
+  }
+}

@@ -1,0 +1,295 @@
+header {
+  .header {
+    background-color: @golden;
+    position: relative;
+    z-index: 5;
+    height: 100px;
+
+
+    &_blocked {
+      position: fixed;
+      width: 100%;
+    }
+
+    &__filler {
+      height: 100px;
+      display: none;
+
+      &_active {
+        display: block;
+      }
+    }
+  }
+
+  .logo {
+    &__col {
+      padding: 0;
+      display: flex;
+      align-items: center;
+      height: 100px;
+    }
+
+    &__img {
+      max-height: 100px;
+      max-width: 100%;
+    }
+  }
+
+  .address {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 26px;
+      height: 26px;
+      margin: 0 5px -6px 0;
+    }
+
+    &_first {
+      margin-top: 15px;
+
+      &::before {
+        background: url("../img/address.png") center;
+        background-size: contain;
+      }
+    }
+
+    &_metro {
+      color: @gray;
+
+      &::before {
+        background: url("../img/metro.png") center;
+        background-size: contain;
+      }
+    }
+
+    &_time {
+      &::before {
+        background: url("../img/time.png") center;
+        background-size: contain;
+      }
+    }
+  }
+
+  .social {
+    width: fit-content;
+    margin-left: auto;
+
+    &__phone {
+      font-size: 1.3rem;
+      font-weight: 600;
+      display: block;
+      color: @black;
+      width: fit-content;
+      margin: 15px 0 0 auto;
+      transition: all 0.3s;
+
+      &:hover {
+      }
+    }
+
+    &__links {
+      margin-top: 5px;
+      text-align: center;
+    }
+
+    &__link {
+      margin-right: 5px;
+      margin-left: 5px;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    &__img {
+      height: 25px;
+      transition: all 0.3s;
+
+      &_fb {
+        &:hover {
+          fill: @blue-fb;
+        }
+      }
+
+      &_ig {
+        &:hover {
+          fill: @purple-ig;
+        }
+      }
+
+      &_yt {
+        &:hover {
+          fill: @red-yt;
+        }
+      }
+    }
+  }
+
+  .burger {
+    display: block;
+    height: 50px;
+    margin: 0 0 0 auto;
+
+    &__wrapper {
+      display: flex;
+      align-items: center;
+    }
+
+    &__strip {
+      transform-origin: center center;
+      transition: all 0.3s;
+
+      &_1 {
+        transform: translateY(-400px) rotate(0);
+
+        &_rotated {
+          transform: translate(0) rotate(45deg);
+        }
+      }
+
+      &_2 {
+        transform: translateY(0) rotate(0);
+
+        &_rotated {
+          transform: translate(0) rotate(45deg);
+        }
+      }
+
+      &_3 {
+        transform: translateY(400px) rotate(0);
+
+        &_rotated {
+          transform: translate(0) rotate(-45deg);
+        }
+      }
+
+      &_onestrip {
+        transform: translate(0) rotate(0);
+      }
+    }
+  }
+
+  .desktopmenu {
+    padding: 0;
+    background-color: @golden;
+    align-items: center;
+
+    &__nav {
+
+    }
+
+    &__list {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    &__li {
+      display: inline-block;
+    }
+
+    &__item {
+      display: block;
+      padding: 5px 10px;
+      color: @black;
+      transition: all 0.5s;
+      text-transform: uppercase;
+
+      &:hover {
+        text-decoration: none;
+        background-color: @white;
+      }
+    }
+  }
+
+  .menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding-top: 100px;
+    height: 100vh;
+    background-color: @golden;
+    width: 100%;
+    transform: translateY(-100%);
+    transition: all 0.5s;
+    z-index: 4;
+
+    &_opened {
+      transform: translateY(0);
+    }
+
+    &__list {
+      list-style-type: none;
+    }
+
+    &__li {
+      margin-right: 65px;
+      border-bottom: 2px solid @black;
+    }
+
+    &__item {
+      color: @black;
+      font-size: 2rem;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    &__phone {
+      display: block;
+      font-size: 1.5rem;
+      color: @black;
+      margin: 0 65px 0 auto;
+      width: fit-content;
+    }
+  }
+}
+
+//sm
+@media (min-width: 576px) {
+
+}
+
+//md
+@media (min-width: 768px) {
+  header {
+    .header {
+      height: 134px;
+    }
+  }
+}
+
+//lg
+@media (min-width: 992px) {
+
+}
+
+//xl
+@media (min-width: 1200px) {
+  header {
+    .header {
+      height: 100px;
+    }
+
+    .social {
+      margin: 0 auto;
+    }
+
+    .desktopmenu {
+      &__item {
+        text-decoration: underline;
+        text-transform: none;
+
+        &:hover {
+          background: none;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

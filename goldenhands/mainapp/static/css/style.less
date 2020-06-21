@@ -1,0 +1,108 @@
+@import "bootstrap.css";
+@import "colors";
+@import "header";
+@import "footer";
+@import "mainwindow/mainwindow";
+@import "about/about";
+@import "services/services";
+@import "works/works";
+@import "reviews/reviews";
+
+.background {
+  min-width: 320px;
+}
+.window {
+  background-color: @white;
+}
+.blocked {
+  overflow: hidden !important;
+  height: 100%;
+}
+
+.overlay {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.75);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.35s ease-in-out;
+  max-height: 100vh;
+  overflow-y: auto;
+  z-index: 10;
+}
+.overlay.open {
+  opacity: 1;
+  pointer-events: inherit;
+}
+.overlay .modal_modal {
+  background: white;
+  text-align: center;
+  box-shadow: 0px 1px 10px rgba(255, 255, 255, 0.35);
+  opacity: 0;
+  padding: 40px 10px;
+  pointer-events: none;
+  transition: 0.35s ease-in-out;
+  max-height: 90vh;
+  max-width: 90%;
+  width: 500px;
+  overflow-y: auto;
+}
+.overlay .modal_modal.open {
+  opacity: 1;
+  pointer-events: inherit;
+}
+.overlay .modal_modal.open .content {
+  transform: translate(0, 0px);
+  opacity: 1;
+}
+.overlay .modal_modal .content {
+  transform: translate(0, -10px);
+  opacity: 0;
+  transition: 0.35s ease-in-out;
+}
+.overlay .modal_modal .title {
+  margin-top: 0;
+}
+
+.modal_modal {
+  &__text {
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+  &__input {
+    min-width: 250px;
+    max-width: 350px;
+    margin: 10px auto;
+  }
+  &__btn {
+    display: inline-block;
+    border: none;
+    color: @black;
+    padding: 10px;
+    transition: all 0.3s;
+    margin: 10px;
+    &:hover {
+      color: @white;
+      text-decoration: none;
+    }
+    &_send {
+      background-color: @golden;
+      &:hover {
+        background-color: @pink-dark;
+      }
+    }
+    &_cancel {
+      background-color: @gray-light;
+      &:hover {
+        background-color: @gray-dark;
+      }
+    }
+  }
+}
