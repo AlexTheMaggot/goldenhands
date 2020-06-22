@@ -1,0 +1,24 @@
+{% extends 'wrapper.html' %}
+{% load static %}
+
+{% block title %}Спасибо!{% endblock %}
+
+{% block content %}
+<body class="background">
+{% include 'header.html' %}
+<main>
+    <div class="container-fluid">
+        <div class="row thanks__bg">
+            <div class="col-12">
+                <div class="thanks">
+                    <p class="thanks__title">Спасибо!</p>
+                    <p class="thanks__text">Ваша заявка принята, с вами свяжутся через несколько минут</p>
+                    <a href="/" class="thanks__link">На главную</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% include 'footer.html' %}
+</body>
+{% endblock %}

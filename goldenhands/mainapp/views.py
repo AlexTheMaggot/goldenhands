@@ -12,6 +12,7 @@ bot = telebot.TeleBot("1159858590:AAFcZbLCwyh2bap4y06ywFqNKRe-qCDl-Gs")
 def index(request):
     return render(request, 'mainapp/index.html')
 
+
 class OrderView(View):
 
     def post(self, request):
@@ -23,8 +24,14 @@ class OrderView(View):
                 phone = form.cleaned_data['phone']
                 message = 'Новая заявка!' + '\r\n' + '\r\n' + 'Имя: ' + name + '\r\n'
                 message += 'Телефон: ' + phone
-                bot.send_message(104566710, message)
-                return redirect('/')
-        return redirect('/')
+                bot.send_message(-1001414303261, message)
+                return redirect('/thank-you')
+        return redirect('/wrong')
 
 
+def thanks(request):
+    return render(request, 'mainapp/thanks.html')
+
+
+def wrong(request):
+    return render(request, 'mainapp/wrong.html')

@@ -11,9 +11,11 @@
 .background {
   min-width: 320px;
 }
+
 .window {
   background-color: @white;
 }
+
 .blocked {
   overflow: hidden !important;
   height: 100%;
@@ -37,10 +39,12 @@
   overflow-y: auto;
   z-index: 10;
 }
+
 .overlay.open {
   opacity: 1;
   pointer-events: inherit;
 }
+
 .overlay .modal_modal {
   background: white;
   text-align: center;
@@ -54,19 +58,23 @@
   width: 500px;
   overflow-y: auto;
 }
+
 .overlay .modal_modal.open {
   opacity: 1;
   pointer-events: inherit;
 }
+
 .overlay .modal_modal.open .content {
   transform: translate(0, 0px);
   opacity: 1;
 }
+
 .overlay .modal_modal .content {
   transform: translate(0, -10px);
   opacity: 0;
   transition: 0.35s ease-in-out;
 }
+
 .overlay .modal_modal .title {
   margin-top: 0;
 }
@@ -76,11 +84,13 @@
     font-weight: 600;
     font-size: 1.5rem;
   }
+
   &__input {
     min-width: 250px;
     max-width: 350px;
     margin: 10px auto;
   }
+
   &__btn {
     display: inline-block;
     border: none;
@@ -88,21 +98,65 @@
     padding: 10px;
     transition: all 0.3s;
     margin: 10px;
+
     &:hover {
       color: @white;
       text-decoration: none;
     }
+
     &_send {
       background-color: @golden;
+
       &:hover {
         background-color: @pink-dark;
       }
     }
+
     &_cancel {
       background-color: @gray-light;
+
       &:hover {
         background-color: @gray-dark;
       }
+    }
+  }
+}
+
+.thanks {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 40px 10px;
+  background-color: @white;
+
+  &__bg {
+    background: url("../img/bg02.jpg") center;
+    background-size: cover;
+  }
+
+  &__title {
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+
+  &__text {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  &__link {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    color: @black;
+    background-color: @golden;
+    padding: 10px 20px;
+    transition: all 0.3s;
+
+    &:hover {
+      text-decoration: none;
+      color: @white;
+      background-color: @pink-dark;
     }
   }
 }

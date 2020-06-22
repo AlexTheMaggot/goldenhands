@@ -630,4 +630,37 @@ footer .contacts__copyright {
 .modal_modal__btn_cancel:hover {
   background-color: #333333;
 }
+.thanks {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 40px 10px;
+  background-color: #FFFFFF;
+}
+.thanks__bg {
+  background: url("../img/bg02.jpg") center;
+  background-size: cover;
+}
+.thanks__title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+.thanks__text {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.thanks__link {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  color: #000000;
+  background-color: #EFDB92;
+  padding: 10px 20px;
+  transition: all 0.3s;
+}
+.thanks__link:hover {
+  text-decoration: none;
+  color: #FFFFFF;
+  background-color: #922C3E;
+}
 /*# sourceMappingURL=style.css.map */
