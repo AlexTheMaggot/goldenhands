@@ -24,7 +24,7 @@ urlpatterns = [
     path('', include('mainapp.urls')),
 ]
 
-handler404 = 'mainapp.views.page_not_found'
+handler404 = 'mainapp.views.custom_404'
 
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

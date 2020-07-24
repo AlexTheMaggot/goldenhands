@@ -37,5 +37,5 @@ def wrong(request):
     return render(request, 'mainapp/wrong.html')
 
 
-def page_not_found(request, exception):
-    return render(request, 'mainapp/404.html')
+def custom_404(request, exception):
+    return render(request, "404.html")
