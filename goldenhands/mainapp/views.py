@@ -39,3 +39,15 @@ def wrong(request):
 
 def custom_404(request, exception):
     return render(request, "404.html")
+
+
+def main(request):
+    return render(request, 'mainapp/main.html')
+
+
+def main_order(request):
+    return redirect('/main/thank-you')
+
+
+def main_thanks(request):
+    return render(request, 'mainapp/main_thanks.html')

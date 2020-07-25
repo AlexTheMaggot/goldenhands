@@ -1,0 +1,67 @@
+{% load static %}
+<header>
+    <div class="container-fluid">
+        <div class="row header">
+            <div class="col-xl-3 col-lg-4 col-md-6 col-9 logo__col">
+                <a href="{% url 'main' %}">
+                    <img src="{% static 'img/logo.jpg' %}" alt="" class="logo__img">
+                </a>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-12 d-lg-block d-none">
+                <p class="address address_first">Алтайская улица, д.33/7</p>
+                <p class="address address_time">Пн-Вс 9:00-21:00</p>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 d-md-block d-none">
+                <div class="social">
+                    <a href="tel:+74955454625" class="social__phone">+7 (495) 545-4-625</a>
+                    <p class="social__phone">м. Щелковская</p>
+                </div>
+            </div>
+            <div class="d-md-none col-3 burger__wrapper">
+                <svg class="burger burger_closed" id="burger" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 1000 1000">
+                    <rect class="burger__strip burger__strip_1" y="400" width="1000" height="200"/>
+                    <rect class="burger__strip burger__strip_2" y="400" width="1000" height="200"/>
+                    <rect class="burger__strip burger__strip_3" y="400" width="1000" height="200"/>
+                </svg>
+            </div>
+            <div class="col-xl-3 col-12 desktopmenu d-none d-md-flex">
+                <nav class="desktopmenu__nav">
+                    <ul class="desktopmenu__list">
+                        <li class="desktopmenu__li">
+                            <a href="/#about" class="desktopmenu__item">О нас</a>
+                        <li class="desktopmenu__li">
+                            <a href="/#services" class="desktopmenu__item">Услуги</a>
+                        <li class="desktopmenu__li">
+                            <a href="/#works" class="desktopmenu__item">Работы</a>
+                        <li class="desktopmenu__li">
+                            <a href="/#reviews" class="desktopmenu__item">Отзывы</a>
+                        <li class="desktopmenu__li">
+                            <a href="/#contacts" class="desktopmenu__item">Контакты</a>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <nav class="menu">
+            <ul class="menu__list">
+                <li class="menu__li">
+                    <a href="/#about" class="menu__item">О нас</a>
+                </li>
+                <li class="menu__li">
+                    <a href="/#services" class="menu__item">Услуги</a>
+                </li>
+                <li class="menu__li">
+                    <a href="/#works" class="menu__item">Работы</a>
+                </li>
+                <li class="menu__li">
+                    <a href="/#reviews" class="menu__item">Отзывы</a>
+                </li>
+                <li class="menu__li">
+                    <a href="/#contacts" class="menu__item">Контакты</a>
+                </li>
+            </ul>
+            <a href="tel:+74955454625" class="menu__phone">+7 (495) 545-4-625</a>
+        </nav>
+        <div class="header__filler"></div>
+    </div>
+</header>

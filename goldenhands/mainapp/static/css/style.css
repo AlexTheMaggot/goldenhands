@@ -259,6 +259,24 @@ footer .contacts__copyright {
 footer .contacts__copyright_last {
   margin: 0;
 }
+footer .contacts__license {
+  display: block;
+  width: fit-content;
+  width: -moz-fit-content;
+  background-color: #922C3E;
+  color: #FFFFFF;
+  padding: 5px 10px;
+  font-size: 1.5rem;
+  transition: all 0.3s;
+}
+footer .contacts__license:hover {
+  text-decoration: none;
+  transform: scale(1.1);
+}
+footer .contacts__license-img {
+  height: 40px;
+  fill: #FFFFFF;
+}
 .mainwindow {
   background: url("../img/bg01.jpg") center;
   background-size: cover;
