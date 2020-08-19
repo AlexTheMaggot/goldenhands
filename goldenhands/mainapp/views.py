@@ -42,8 +42,8 @@ def custom_404(request, exception):
 
 
 def main(request):
-    return render(request, 'mainapp/main.html')
-
+    # return render(request, 'mainapp/main.html')
+    return redirect('/')
 
 def main_order(request):
     return redirect('/main/thank-you')
